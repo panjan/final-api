@@ -54,7 +54,6 @@ class Build
     where([column, operator, '?'].join(' '), term)
   end
 
-
   def parts_groups
     matrix.group_by do |t|
       t.config_vars_hash['PART'] || t.config_vars_hash['Part']

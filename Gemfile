@@ -3,8 +3,8 @@ source "https://rubygems.org"
 
 ruby '2.2.2'
 
-gem 'travis-core',        github: 'final-ci/travis-core'
-#gem 'travis-core',        path: '../travis-core'
+# gem 'travis-core',        github: 'final-ci/travis-core'
+gem 'travis-core',        path: '../travis-core'
 gem 'travis-config',      github: 'final-ci/travis-config'
 gem 'travis-support',     github: 'final-ci/travis-support'
 #gem 'test-aggregation',   path: '../test-aggregation'
@@ -45,6 +45,9 @@ end
 
 group 'development' do
   gem 'rerun'
+  gem 'pry'
+  gem 'pry-doc'
+  gem 'method_source'
 end
 
 gem 'stash-client'

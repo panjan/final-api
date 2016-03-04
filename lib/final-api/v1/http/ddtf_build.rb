@@ -119,6 +119,8 @@ module FinalAPI
             end
           )
           build.matrix.each do |job|
+            puts '>' * 20
+            puts StepResult
             StepResult.where(job_id: job.id).order('id desc').each do |sr|
               @ddtf_test_aggregation_result.parse(sr.data)
             end
